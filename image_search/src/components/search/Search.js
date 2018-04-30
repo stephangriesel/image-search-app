@@ -19,7 +19,7 @@ class Search extends Component {
         const val = e.target.value;
         this.setState({ [e.target.name]: val }, () => {
           if (val === '') {
-            this.setState({ images: [] });
+            this.setState({ images: [] }); // clear images if search field blank
           } else {
             axios
               .get(
